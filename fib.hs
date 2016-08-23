@@ -1,6 +1,15 @@
 fib :: Int -> Int
 fib n = last $ fib_list n
 
+fib' 0 = 1
+fib' 1 = 1
+fib' n = fib(n - 1) + fib(n - 2)
+
+fib'' n
+  | n == 0 = 1
+  | n == 1 = 1
+  | n > 1 = fib''(n - 1) + fib''(n - 2)
+
 fib_sum :: Int -> Int
 fib_sum n = foldl (+) 0 (fib_list n)
 
